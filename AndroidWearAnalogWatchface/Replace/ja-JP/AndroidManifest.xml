@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- manifest要素は、マニフェストの構成を定義します。
+     package属性は、アプリのパッケージ名（ Google PlayでのURLで使用します ）を表します。
+     versionCode属性は、Google Playで管理するためのバージョン番号（整数）を表します。
+     versionName属性は、Google Playで表示するアプリのバージョンを表します。 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="$safeprojectname$.$safeprojectname$"
+		  android:versionCode="1" android:versionName="1.0"
+		  android:installLocation="auto">
+		  
+	<!-- uses-sdk要素は、Android SDKのバージョンを表します。
+         minSdkVersion属性は、ターゲットにするAndroid SDKの最小バージョンを表します。
+         ※ Watch Face API は Android SDK 5.0（API Level 21）以上が必要です。
+         ※ 単位はAPI Levelです。 -->
+	<uses-sdk android:minSdkVersion="21" />
+	
+	<!-- user-feature要素は、アプリケーションで使用している機能や、使用するデバイスの種類を宣言します。
+         Watch Faceアプリの場合、name属性に「android.hardware.type.watch」を設定します。 -->
+	<uses-feature android:name="android.hardware.type.watch" />
+	
+	<!-- uses-permission要素は、アプリケーションがユーザーに許可を要求する機能を宣言します。
+         Watch Faceアプリの場合、「WAKE_LOCK」と「PROVIDE_BACKGROUND」が必要です。 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+	
+	<!-- application要素は、アプリケーションの構成を定義します。
+         label属性は、アプリのタイトル名を表します。
+         allowEmbedded属性は、このActivity / Serviceを他のActivityの子として埋め込み、起動できるかどうかを表します。
+         taskAffinity属性は、タスクをグループ化するためのAffinityを表します。デフォルト（もしくは空欄）の場合、パッケージ名となります。
+         allowBackup属性は、バックアップサポートを利用するかどうかを表します。
+         supportsRtl属性は、右から左方向へのレイアウトをサポートするかどうかを表します（アラビア語など、右から左方向へ文字を書く言語をサポートするためです）。
+         theme属性は、アプリケーションで使用するテーマを表します。 -->
+	<application android:label="@string/app_name"
+				 android:allowEmbedded="true"
+                 android:taskAffinity=""
+				 android:allowBackup="true" android:supportsRtl="true"
+				 android:theme="@android:style/Theme.DeviceDefault">
+	</application>
+</manifest>

@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronoir_net.Chronica.WatchfaceExtension", "Chronoir_net.Chronica.WatchfaceExtension\Chronoir_net.Chronica.WatchfaceExtension.csproj", "{BB50946F-C039-4209-96C3-CA367B6A2F07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidWearAnalogWatchface", "AndroidWearAnalogWatchface\AndroidWearAnalogWatchface.csproj", "{9EE24035-C8FE-4357-B455-6432BC675F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidWearDigitalWatchface", "AndroidWearDigitalWatchface\AndroidWearDigitalWatchface.csproj", "{D7FC1247-EB11-40EF-B180-752058B51A4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,18 @@ Global
 		{BB50946F-C039-4209-96C3-CA367B6A2F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB50946F-C039-4209-96C3-CA367B6A2F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB50946F-C039-4209-96C3-CA367B6A2F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE24035-C8FE-4357-B455-6432BC675F3A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7FC1247-EB11-40EF-B180-752058B51A4B}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

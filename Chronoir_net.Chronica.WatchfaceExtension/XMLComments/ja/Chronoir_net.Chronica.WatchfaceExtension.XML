@@ -1,297 +1,297 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Chronoir_net.Chronoface.Utility</name>
+        <name>Chronoir_net.Chronica.WatchfaceExtension</name>
     </assembly>
     <members>
-        <member name="T:Chronoir_net.Chronoface.Utility.AnalogHandStroke">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke">
             <summary>
 				針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと先端のXY座標、長さを格納した、アナログメーターストロークを表します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.AnalogHandStroke.Paint">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke.Paint">
             <summary>
             	針の<see cref="T:Android.Graphics.Paint"/>オブジェクトを取得します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.AnalogHandStroke.X">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke.X">
             <summary>
             	針の先端のX座標を取得します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.AnalogHandStroke.Y">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke.Y">
             <summary>
             	針の先端のY座標を取得します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.AnalogHandStroke.Length">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke.Length">
             <summary>
             	針の長さを取得・設定します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.AnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
             <summary>
-            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronoface.Utility.AnalogHandStroke"/>クラスの新しいインスタンスを生成します。
+            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.AnalogHandStroke"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="paint">針の<see cref="T:Android.Graphics.Paint"/>オブジェクト</param>
             <param name="length">針の長さ</param>
         </member>
-        <member name="T:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke">
             <summary>
             	秒針のアナログメーターストロークを表します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
             <summary>
-            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
+            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="paint">針の<see cref="T:Android.Graphics.Paint"/>オブジェクト</param>
             <param name="length">針の長さ</param>
         </member>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke.SetTime(System.Int32)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke.SetTime(System.Int32)">
             <summary>
 				指定した秒の値から、秒針の先端のXY座標を求めます。
             </summary>
             <param name="second">秒 ( 0～59 )</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke.SetTime(Android.Text.Format.Time)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke.SetTime(Android.Text.Format.Time)">
             <summary>
             	指定した<see cref="T:Android.Text.Format.Time"/>オブジェクトの秒の値から、秒針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Android.Text.Format.Time"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke.SetTime(Java.Util.Calendar)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke.SetTime(Java.Util.Calendar)">
             <summary>
             	指定した<see cref="T:Java.Util.Calendar"/>オブジェクトの秒の値から、秒針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Java.Util.Calendar"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.SecondAnalogHandStroke.SetTime(System.DateTime)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.SecondAnalogHandStroke.SetTime(System.DateTime)">
             <summary>
             	指定した<see cref="T:System.DateTime"/>オブジェクトの秒の値から、秒針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:System.DateTime"/>オブジェクト</param>
         </member>
-        <member name="T:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke">
             <summary>
             	分針のアナログメーターストロークを表します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
             <summary>
-            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
+            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="paint">針の<see cref="T:Android.Graphics.Paint"/>オブジェクト</param>
             <param name="length">針の長さ</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke.SetTime(System.Int32)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke.SetTime(System.Int32)">
             <summary>
             	指定した分の値から、分針の先端のXY座標を求めます。
             </summary>
             <param name="minute">分 ( 0～59 )</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke.SetTime(Android.Text.Format.Time)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke.SetTime(Android.Text.Format.Time)">
             <summary>
             	指定した<see cref="T:Android.Text.Format.Time"/>オブジェクトの分の値から、分針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Android.Text.Format.Time"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke.SetTime(Java.Util.Calendar)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke.SetTime(Java.Util.Calendar)">
             <summary>
             	指定した<see cref="T:Java.Util.Calendar"/>オブジェクトの分の値から、分針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Java.Util.Calendar"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.MinuteAnalogHandStroke.SetTime(System.DateTime)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.MinuteAnalogHandStroke.SetTime(System.DateTime)">
             <summary>
             	指定した<see cref="T:System.DateTime"/>オブジェクトの分の値から、分針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:System.DateTime"/>オブジェクト</param>
         </member>
-        <member name="T:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke">
             <summary>
             	時針のアナログメーターストロークを表します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke.#ctor(Android.Graphics.Paint,System.Single)">
             <summary>
-            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
+            	指定した針の<see cref="T:Android.Graphics.Paint"/>オブジェクトと長さから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="paint">針の<see cref="T:Android.Graphics.Paint"/>オブジェクト</param>
             <param name="length">針の長さ</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke.SetTime(System.Int32,System.Int32)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke.SetTime(System.Int32,System.Int32)">
             <summary>
             	指定した時分の値から、時針の先端のXY座標を求めます。
             </summary>
             <param name="hour">時 ( 0～23 )</param>
             <param name="minute">分 ( 0～59 )</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke.SetTime(Android.Text.Format.Time)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke.SetTime(Android.Text.Format.Time)">
             <summary>
             	指定した<see cref="T:Android.Text.Format.Time"/>オブジェクトの時分の値から、時針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Android.Text.Format.Time"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke.SetTime(Java.Util.Calendar)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke.SetTime(Java.Util.Calendar)">
             <summary>
             	指定した<see cref="T:Java.Util.Calendar"/>オブジェクトの時分の値から、時針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:Java.Util.Calendar"/>オブジェクト</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.HourAnalogHandStroke.SetTime(System.DateTime)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.HourAnalogHandStroke.SetTime(System.DateTime)">
             <summary>
             	指定した<see cref="T:System.DateTime"/>オブジェクトの時分の値から、時針の先端のXY座標を求めます。
             </summary>
             <param name="time">時刻を格納した<see cref="T:System.DateTime"/>オブジェクト</param>
         </member>
-		<member name="T:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver">
+		<member name="T:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver">
             <summary>
 				<see cref="P:Android.App.Application.Context"/>への登録および登録解除する機能を搭載した、<see cref="T:Android.Content.BroadcastReceiver"/>クラスを提供します。
             </summary>
         </member>
-        <member name="F:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.intentFilter">
+        <member name="F:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.intentFilter">
             <summary>
 				<see cref="T:Android.Content.Intent"/>の情報を識別するMIMEタイプを表します。
             </summary>
         </member>
-        <member name="F:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.isRegistered">
+        <member name="F:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.isRegistered">
             <summary>
             	<see cref="T:Android.Content.BroadcastReceiver"/>が<see cref="P:Android.App.Application.Context"/>に登録されているかどうかを表します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.IsRegistered">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.IsRegistered">
             <summary>
 				<see cref="T:Android.Content.BroadcastReceiver"/>が<see cref="P:Android.App.Application.Context"/>に登録されているかどうかを表す値を取得・設定します。
             </summary>
 			<value>true : 登録済み / false : 未登録</value>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.#ctor(System.String)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.#ctor(System.String)">
             <summary>
-				指定した<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
+				指定した<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="filter"><see cref="T:Android.Content.Intent"/>の情報を識別するMIMEタイプ</param>
         </member>
-		<member name="M:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.RegisterToContext">
+		<member name="M:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.RegisterToContext">
             <summary>
             	<see cref="T:Android.Content.BroadcastReceiver"/>を<see cref="P:Android.App.Application.Context"/>に登録します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.RegistrationSwitchableBroadcastReceiver.UnregisterFromContext">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.RegistrationSwitchableBroadcastReceiver.UnregisterFromContext">
             <summary>
             	<see cref="T:Android.Content.BroadcastReceiver"/>を<see cref="P:Android.App.Application.Context"/>から削除します。
             </summary>
         </member>
-        <member name="T:Chronoir_net.Chronoface.Utility.ActionExecutableBroadcastReceiver">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.ActionExecutableBroadcastReceiver">
             <summary>
 				ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時、指定したデリゲートを実行する<see cref="T:Android.Content.BroadcastReceiver"/>クラスを提供します。
             </summary>
         </member>
-        <member name="F:Chronoir_net.Chronoface.Utility.ActionExecutableBroadcastReceiver.broadcastedIntentRecieved">
+        <member name="F:Chronoir_net.Chronica.WatchfaceExtension.ActionExecutableBroadcastReceiver.broadcastedIntentRecieved">
             <summary>
 				ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時に実行するデリゲートを表します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.ActionExecutableBroadcastReceiver.#ctor(System.Action{Android.Content.Intent},System.String)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.ActionExecutableBroadcastReceiver.#ctor(System.Action{Android.Content.Intent},System.String)">
             <summary>
-				指定したデリゲートと<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronoface.Utility.ActionExecutableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
+				指定したデリゲートと<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.ActionExecutableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="action">ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時に実行するデリゲート</param>
             <param name="filter"><see cref="T:Android.Content.Intent"/>の情報を識別するMIMEタイプ</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.ActionExecutableBroadcastReceiver.OnReceive(Android.Content.Context,Android.Content.Intent)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.ActionExecutableBroadcastReceiver.OnReceive(Android.Content.Context,Android.Content.Intent)">
             <summary>
             	ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時に実行します。
             </summary>
             <param name="context"><see cref="T:Android.Context"/>オブジェクト</param>
             <param name="intent">ブロードキャストされた<see cref="T:Android.Content.Intent"/>オブジェクト</param>
         </member>
-        <member name="T:Chronoir_net.Chronoface.Utility.EventExecutableBroadcastReceiver">
+        <member name="T:Chronoir_net.Chronica.WatchfaceExtension.EventExecutableBroadcastReceiver">
             <summary>
             	ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時、イベントに紐付けたデリゲートを実行する<see cref="T:Android.Content.BroadcastReceiver"/>クラスを提供します。
             </summary>
         </member>
-        <member name="E:Chronoir_net.Chronoface.Utility.EventExecutableBroadcastReceiver.BroadcastedIntentRecieved">
+        <member name="E:Chronoir_net.Chronica.WatchfaceExtension.EventExecutableBroadcastReceiver.BroadcastedIntentRecieved">
             <summary>
             	ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時に実行するデリゲートを紐付けるイベントハンドラーを表します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.EventExecutableBroadcastReceiver.#ctor(System.String)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.EventExecutableBroadcastReceiver.#ctor(System.String)">
             <summary>
-            	指定した<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronoface.Utility.EventExecutableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
+            	指定した<see cref="T:Android.Content.Intent"/>のMIMEタイプから<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.EventExecutableBroadcastReceiver"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="filter"><see cref="T:Android.Content.Intent"/>の情報を識別するMIMEタイプ</param>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.EventExecutableBroadcastReceiver.OnReceive(Android.Content.Context,Android.Content.Intent)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.EventExecutableBroadcastReceiver.OnReceive(Android.Content.Context,Android.Content.Intent)">
             <summary>
             	ブロードキャストされた<see cref="T:Android.Content.Intent"/>を受信した時に実行します。
             </summary>
             <param name="context"><see cref="T:Android.Context"/>オブジェクト</param>
             <param name="intent">ブロードキャストされた<see cref="T:Android.Content.Intent"/>オブジェクト</param>
         </member>
-		<member name="T:Chronoir_net.Chronoface.Utility.DigitalTextStyle">
+		<member name="T:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle">
             <summary>
             	<see cref="T:Android.Graphics.Paint"/>オブジェクトと左上のXY座標を格納したテキストスタイルを表します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.DigitalTextStyle.Paint">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle.Paint">
             <summary>
             	テキストの<see cref="T:Android.Graphics.Paint"/>オブジェクトを取得します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.DigitalTextStyle.XOffset">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle.XOffset">
             <summary>
             	左上のX座標を取得します。
             </summary>
         </member>
-        <member name="P:Chronoir_net.Chronoface.Utility.DigitalTextStyle.YOffset">
+        <member name="P:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle.YOffset">
             <summary>
             	左上のY座標を取得します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.DigitalTextStyle.#ctor(Android.Graphics.Paint,System.Single,System.Single)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle.#ctor(Android.Graphics.Paint,System.Single,System.Single)">
             <summary>
-				指定した<see cref="T:Android.Graphics.Paint"/>オブジェクトと左上のXY座標から、<see cref="T:Chronoir_net.Chronoface.Utility.DigitalTextStyle"/>クラスの新しいインスタンスを生成します。
+				指定した<see cref="T:Android.Graphics.Paint"/>オブジェクトと左上のXY座標から、<see cref="T:Chronoir_net.Chronica.WatchfaceExtension.DigitalTextStyle"/>クラスの新しいインスタンスを生成します。
             </summary>
             <param name="paint">テキストの<see cref="T:Android.Graphics.Paint"/>オブジェクト</param>
             <param name="xOffset">左上のX座標</param>
             <param name="yOffset">左上のY座標</param>
         </member>
-		<member name="T:Chronoir_net.Chronoface.Utility.WatchfaceUtility">
+		<member name="T:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility">
             <summary>
             	AndroidWearのウォッチフェイスアプリ開発に便利な機能を提供します。
             </summary>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertARGBToColor(System.Int32)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertARGBToColor(System.Int32)">
             <summary>
             	ARGB値を格納した整数値を等価の<see cref="T:Android.Graphics.Color"/>型に変換します。
             </summary>
             <param name="argb">ARGB値</param>
             <returns>ARGB値と等価の<see cref="T:Android.Graphics.Color"/>型オブジェクト</returns>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertToDateTime(Android.Text.Format.Time)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertToDateTime(Android.Text.Format.Time)">
             <summary>
             	<see cref="T:Android.Text.Format.Time"/>型オブジェクトを等価の<see cref="T:System.DateTime"/>型に変換します。
             </summary>
             <param name="time"><see cref="T:Android.Text.Format.Time"/>型オブジェクト</param>
             <returns>引数と等価の<see cref="T:System.DateTime"/>型オブジェクト</returns>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertToDateTime(Java.Util.Calendar)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertToDateTime(Java.Util.Calendar)">
             <summary>
             	<see cref="T:Java.Lang.Character"/>型オブジェクトを等価の<see cref="T:System.DateTime"/>型に変換します。
             </summary>
             <param name="time"><see cref="T:Java.Util.Calendar"/>型オブジェクト</param>
             <returns>引数と等価の<see cref="T:System.DateTime"/>型オブジェクト</returns>
         </member>
-        <member name="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertToDateTime(System.DateTime)">
+        <member name="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertToDateTime(System.DateTime)">
             <summary>
             	指定した<see cref="T:System.DateTime"/>型オブジェクトをそのまま返します。
             </summary>
             <param name="time"><see cref="T:System.DateTime"/>型オブジェクト</param>
             <returns>指定した引数そのもの</returns>
             <remarks>
-            	これは<see cref="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertToDateTime(Android.Text.Format.Time)"/>メソッドと<see cref="M:Chronoir_net.Chronoface.Utility.WatchfaceUtility.ConvertToDateTime(Java.Util.Calendar)"/>との互換性確保のために定義されています。
+            	これは<see cref="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertToDateTime(Android.Text.Format.Time)"/>メソッドと<see cref="M:Chronoir_net.Chronica.WatchfaceExtension.WatchfaceUtility.ConvertToDateTime(Java.Util.Calendar)"/>との互換性確保のために定義されています。
             </remarks>
         </member>
     </members>

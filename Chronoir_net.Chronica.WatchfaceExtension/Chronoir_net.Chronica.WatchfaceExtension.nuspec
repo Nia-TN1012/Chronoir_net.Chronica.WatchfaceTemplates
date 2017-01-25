@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Nia Tomonaka</authors>
+    <owners>Nia Tomonaka</owners>
+    <licenseUrl>https://raw.githubusercontent.com/Nia-TN1012/Chronoir_net.Chronica.WatchfaceTemplates/master/LICENCE</licenseUrl>
+    <projectUrl>https://github.com/Nia-TN1012/Chronoir_net.Chronica.WatchfaceTemplates</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Nia-TN1012/Chronoir_net.Chronica.WatchfaceTemplates/master/image/Watchface.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <language>en-US, ja-JP</language>
+    <releaseNotes>
+	$version$ : 
+		* Fix a bug.
+	</releaseNotes>
+    <copyright>Copyright (C) 2016-2017 Chronoir.net</copyright>
+    <tags>C# .NET Android AndroidWear Watchface Xamarin Xamarin.Android</tags>
+  </metadata>
+  <files>
+	<file src="XMLComments/ja/$id$.XML" target="lib/monoandroid60/ja/"/>
+  </files>
+</package>

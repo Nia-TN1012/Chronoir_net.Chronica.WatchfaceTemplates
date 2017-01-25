@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- The "manifest" element defines the composition of the manifest.
+       The "package" attribute represents the package name of the application (used in URL on Google Play).
+       The "android:versionCode" attribute represents the version number (specified as integer) for management on Google Play.
+       The "android:versionName" attribute represents the version of the app you see on Google Play. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="AndroidWearDigitalWatchface.AndroidWearDigitalWatchface"
+		  android:versionCode="1" android:versionName="1.0"
+		  android:installLocation="auto">
+
+	<!-- The "uses-sdk" element represents the version of the Android SDK.
+           The "android:minSdkVersion" attribute represents the minimum version of the target Android SDK.
+         Note: The Watch Face API requires Android SDK 5.0 (API Level 21) or higher. -->
+	<uses-sdk android:minSdkVersion="21" />
+
+	<!-- The "user-feature" element declares the function used in the application and the type of the device to be used.
+         Note: For the Watchface application, set "android.hardware.type.watch" as the name attribute. -->
+	<uses-feature android:name="android.hardware.type.watch" />
+
+	<!-- The "uses-permission" element declares the ability of the application to request permission from the user.
+         Note: For the Watchface application, required "WAKE_LOCK" and "PROVIDE_BACKGROUND". -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND" />
+
+	<!-- The "application" element defines the configuration of the application.
+           The "android:label" attribute represents the title of the application.
+           The "android:allowEmbedded" attribute indicates that the activity can be launched as the embedded child of another activity.
+		   The "android:taskAffinity" attribute represents the task that the activity has an affinity for.
+           The "android:allowBackup" attribute indicates whether or not to use backup support.
+           The "android:supportsRtl" attribute indicates whether to support layout from right to left (to support languages that write letters from right to left, such as Arabic).
+           The "android:theme" attribute represents the theme used by the application.-->
+	<application android:label="@string/app_name"
+				 android:allowEmbedded="true"
+                 android:taskAffinity=""
+				 android:allowBackup="true" android:supportsRtl="true"
+				 android:theme="@android:style/Theme.DeviceDefault">
+	</application>
+</manifest>

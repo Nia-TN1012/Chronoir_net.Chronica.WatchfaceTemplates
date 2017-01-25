@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Language" content="ja">
+    <title>Chronoir_net.Chronica.WatchfaceTemplateのチュートリアル</title>
+	<style>
+		 html {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: visible;
+            margin: 0;
+        }
+		@media (min-height: 980px) {
+            html {
+                overflow-y: hidden;
+            }
+        }
+		
+		body {
+            font-family: "Segoe UI", sans-serif;
+			background-color: #F0FCF0;
+            font-size: 15px;
+            padding: 18px 26px;
+            text-align: left;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+		
+		.header {
+            text-align: left;
+            padding: 5px 0;
+		}
+		
+		h1 {
+			color: #3498db;
+            font-size: 42px;
+            font-weight: 200;
+            line-height: 1.2;
+            margin: 0 0 10px 0;
+        }
+		@media (min-width: 665px) {
+            h1 {
+                font-size: 50px;
+                margin: 0;
+            }
+        }
+
+        hgroup {
+            display: inline-block;
+            max-width: 100%;
+        }
+        @media (min-width: 740px) {
+            hgroup {
+                max-width: 100%;
+            }
+        }
+		
+		.byline {
+            font-size: 22px;
+            color: #7f8c8d;
+			line-height: 60px;
+        }
+		
+		a, .link {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        table {
+			margin: 0px 20px 5px 32px;
+			border: solid 1px #808080;
+			width: 90%;
+		}
+		
+		.container {
+			margin: 0 0 20px 0;
+			padding: 7px;
+			background-color: #FFF;
+			border-left: solid 3px #0F0;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
+			-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
+			-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.26);
+		}
+		
+		.content {
+			margin: 0 10px;
+		}
+		
+		.list-description {
+            padding: 0px 20px 5px 32px;
+            line-height: 28px;
+            font-size: 16px;
+            margin: 0px 0px 15px 0px;
+			width:90%;
+        }
+		
+		th, td {
+			padding: 5px;
+			border: solid 1px #808080;
+			line-height: 28px;
+            font-size: 16px;
+		}
+		
+		footer {
+            color: #7f8c8d;
+            text-align: left;
+        }
+
+		footer p {
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+    <div class="header">
+		<hgroup>
+			<h1>Chronoir_net.Chronica.WatchfaceTemplateのチュートリアル</h1>
+		</hgroup>
+		<br/>
+		<span class="byline">C#とXamarinで作る、Android Wear向けのウォッチフェイスアプリ</span>
+	</div>
+	<br/>
+	<div class="container">
+        <div class="content">
+			<h2>1. ようこそ！</h2>
+			<p class="list-description">
+				<strong>Chronoir_net.Chronica.WatchfaceTemplate</strong>のダウンロードしていただき、ありがとうございます！<br/>
+				このプロジェクトテンプレートでは、Android Wearで動かすウォッチフェイスアプリをXamarinで開発することができます。
+			</p>
+			<h3>* このプロジェクトテンプレートについて</h3>
+			<table>
+				<tr>
+					<th>プロジェクトテンプレート名</th>
+					<td>AndroidWearDigitalWatchface</td>
+				</tr>
+				<tr>
+					<th>表示名</th>
+					<td>デジタルウォッチフェイスアプリ (Android Wear)</td>
+				</tr>
+				<tr>
+					<th>プロジェクトテンプレートのバージョン</th>
+					<td>1.0.0</td>
+				</tr>
+				<tr>
+					<th>プログラミン府言語</th>
+					<td>C# 6.0</td>
+				</tr>
+				<tr>
+					<th>ウォッチフェイスのスタイル</th>
+					<td>デジタル</td>
+				</tr>
+				<tr>
+					<th>ターゲットのAndroidのバージョン</th>
+					<td>5.0.1 (Lollipop) / 5.1.1 (Lollipop) / 6.0 (Marshmallow)</td>
+				</tr>
+			</table>
+			<br/>
+		</div>
+    </div>
+	<div class="container">
+        <div class="content">
+			<h2>2. システム要件</h2>
+			<p class="list-description">
+				このプロジェクトで必要な開発環境を以下に示します。
+			</p>
+			<h3>* 開発環境</h3>
+			<table>
+				<tr>
+					<th>名</th>
+					<th>バージョン</th>
+				</tr>
+				<tr>
+					<th>Visual Studio</th>
+					<td>Community 2015 以降</td>
+				</tr>
+				<tr>
+					<th>Xamarin.Android</th>
+					<td>4.2 以降</td>
+				</tr>
+				<tr>
+					<th>Xamarin for Visual Studio</th>
+					<td>4.0.1.145 以降</td>
+				</tr>
+			</table>
+			&nbsp;
+			<h3>* Android SDK</h3>
+			<p class="list-description">
+				Android SDK Managerを起動し、必要に応じてAndroid SDKやツールキットをインストール or 更新します。
+			</p>
+			<table>
+				<tr>
+					<th>SDK名</th>
+					<th>APIレベル / バージョン</th>
+				</tr>
+				<tr>
+					<th>Android SDK Platform</th>
+					<td>API Level 21 and 23</td>
+				</tr>
+				<tr>
+					<th>Android SDK Tools</th>
+					<td>Ver. 23 以降</td>
+				</tr>
+			</table>
+			&nbsp;
+			<h3>* NuGetパッケージ</h3>
+			<p class="list-description">
+				NuGetパッケージマネージャーを起動し、必要に応じてパッケージをインストール or 更新します。
+			</p>
+			<table>
+				<tr>
+					<th>パッケージ名</th>
+					<th>バージョン</th>
+				</tr>
+				<tr>
+					<th><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v4/23.4.0.1">Xamarin.Android.Support.v4</a></th>
+					<td>23.x.x.x</td>
+				</tr>
+				<tr>
+					<th><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v13/23.4.0.1">Xamarin.Android.Support.v13</a></th>
+					<td>23.x.x.x</td>
+				</tr>
+				<tr>
+					<th><a href="https://www.nuget.org/packages/Xamarin.Android.Support.v7.RecyclerView/23.4.0.1">Xamarin.Android.Support.v7.RecyclerView</a></th>
+					<td>23.x.x.x</td>
+				</tr>
+				<tr>
+					<th><a href="https://www.nuget.org/packages/Xamarin.Android.Wear/1.3.0.4">Xamarin.Android.Wear</a></th>
+					<td>1.3.x.x</td>
+				</tr>
+				<tr>
+					<th><a href="https://www.nuget.org/packages/Chronoir_net.Chronica.WatchfaceExtension/">Chronoir_net.Chronica.WatchfaceExtension</a></th>
+					<td>1.0.2.0 以降</td>
+				</tr>
+			</table>
+			<p class="list-description">
+				<strong>備考:</strong> ソリューションを新規作成した時は、NuGetパッケージマネージャーを起動し、パッケージを復元します。
+			</p>
+		</div>
+    </div>
+	<div class="container">
+        <div class="content">
+			<h2>3. プロジェクトテンプレートの中身</h2>
+			<p class="list-description">
+				このプロジェクトテンプレートに含まれるファイルは以下のとおりです。
+			</p>
+			<table>
+				<tr>
+					<th>ファイル名</th>
+					<th>概要</th>
+				</tr>
+				<tr>
+					<th>$safeprojectname$.csproj</th>
+					<td>プロジェクトファイル</td>
+				</tr>
+				<tr>
+					<th>MyWatchFace.cs</th>
+					<td>ウォッチフェイスアプリのソースファイル</td>
+				</tr>
+				<tr>
+					<th>packages.config</th>
+					<td>NuGetパッケージのインストール情報が定義ファイル<br/>(<strong>注:</strong> 直接編集しないでください。)</td>
+				</tr>
+				<tr>
+					<th>Properties/AndroidManifest.xml</th>
+					<td>Androidアプリ用のマニュフェストファイル</td>
+				</tr>
+				<tr>
+					<th>Resources/drawable</th>
+					<td>画像リソース用のフォルダー</td>
+				</tr>
+				<tr>
+					<th>Resources/values/colors.xml</th>
+					<td>色の定義ファイル</td>
+				</tr>
+				<tr>
+					<th>Resources/values/dimens.xml</th>
+					<td>サイズの定義ファイル</td>
+				</tr>
+				<tr>
+					<th>Resources/values/dimens.xml</th>
+					<td>文字列の定義ファイル</td>
+				</tr>
+				<tr>
+					<th>Resources/Resource.designer.cs</th>
+					<td>リソースのIDの定義ファイル<br/>(<strong>注:</strong> 直接編集しないでください。)</td>
+				</tr>
+			</table>
+			<br/>
+		</div>
+    </div>
+	<div class="container">
+        <div class="content">
+			<h2>4. ウォッチフェイスアプリの実行・デバッグ</h2>
+			<p class="list-description">
+				ウォッチフェイスアプリを実行・デバッグする時は、Android Wear用のエミュレーターや実機を用意します。
+			</p>
+			<h3>* エミュレーター</h3>
+			<p class="list-description">
+				Android SDK Managerを起動し、必要に応じてシステムイメージをインストールします。
+			</p>
+			<table>
+				<tr>
+					<th>名</th>
+					<th>APIレベル</th>
+				</tr>
+				<tr>
+					<th>Android Wear Intel x86 Atom System Image</th>
+					<td>API Level 21, 22, 23</td>
+				</tr>
+			</table>
+			<p class="list-description">
+				<strong>備考:</strong> Intel x86のシステムイメージを使用する場合、<strong>「<a href="https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager" target="_blank">Intel x86 Emulator Accelerator (HAXM install)</a>」</strong>をインストールしてください。
+			</p>
+		</div>
+    </div>
+	
+	<footer style="padding:20px 0 20px;">
+		<p>Chronoir.net
+			<a style="padding:0px 0px 0px 20px;" href="https://chronoir.net/" target="_blank">ホームページ</a>
+			<a style="padding:0px 0px 0px 20px;" href="https://github.com/Nia-TN1012/Chronoir_net.Chronica.WatchfaceTemplates" target="_blank">GitHub</a>
+		</p>
+    </footer>
+</body>
+</html>
