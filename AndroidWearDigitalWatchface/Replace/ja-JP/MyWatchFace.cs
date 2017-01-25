@@ -84,7 +84,7 @@ using Android.Util;
 
 using Chronoir_net.Chronica.WatchfaceExtension;
 
-namespace AndroidWearDigitalWatchface {
+namespace $safeprojectname$ {
 
 	/// <summary>
 	/// 	デジタル時計のウォッチフェイスサービスを提供します。
