@@ -73,16 +73,13 @@ using Android.OS;
 using Android.Support.V4.Content;
 using Android.Support.Wearable.Watchface;
 using Android.Text.Format;
+using Android.Util;
 using Android.Views;
 
 // Used with Service and Metadata attributes.
 using Android.App;
 // Used in the WallpaperService class.
 using Android.Service.Wallpaper;
-#if DEBUG
-// Used for log output (Only available for debug build).
-using Android.Util;
-#endif
 
 using Chronoir_net.Chronica.WatchfaceExtension;
 
@@ -352,16 +349,19 @@ namespace AndroidWearAnalogWatchface {
 						// Sets the height of the notification card when receiving the notification.
 						//   WatchFaceStyle.PeekModeShort    : Displays the notification card small at the bottom of the window.（default）
 						//   WatchFaceStyle.PeekModeVariable : Displays the notification card on the front of the window.
+						// Note: This method is deprecated in Android Wear 2.0
 						.SetCardPeekMode( WatchFaceStyle.PeekModeShort )
 
 						// Sets the display method of the notification card background.
 						//   WatchFaceStyle.BackgroundVisibilityInterruptive : Displays the notification card's background, only when some important notification such as incoming calls.（default）
 						//   WatchFaceStyle.BackgroundVisibilityPersistent   : Displays the notification card's background regardless of the notification type.
+						// Note: This method is deprecated in Android Wear 2.0
 						.SetBackgroundVisibility( WatchFaceStyle.BackgroundVisibilityInterruptive )
 
 						// Sets whether or not to display notification cards in ambient mode.
 						//   WatchFaceStyle.AmbientPeekModeVisible : Visible（default）
 						//   WatchFaceStyle.AmbientPeekModeHidden  : Hidden
+						// Note: This method is deprecated in Android Wear 2.0
 						//.SetAmbientPeekMode( WatchFaceStyle.AmbientPeekModeHidden )
 
 						// Sets whether to display the digital clock of the system UI. (As an example of use, there is "Simple" which is provided by default.)
@@ -380,6 +380,7 @@ namespace AndroidWearAnalogWatchface {
 						// Sets whether the notification card is transparent.
 						//   WatchFaceStyle.PeekOpacityModeOpaque      : Opacity（default）
 						//   WatchFaceStyle.PeekOpacityModeTranslucent : Transparent
+						// Note: This method is deprecated in Android Wear 2.0
 						//.SetPeekOpacityMode( WatchFaceStyle.PeekOpacityModeTranslucent )
 
 						// Sets the status icon and "OK Google" position.
@@ -418,36 +419,40 @@ namespace AndroidWearAnalogWatchface {
 				var resources = owner.Resources;
 
 				// Creates a graphics object for the background.
-				backgroundPaint = new Paint();
-				// Reads background color from resource.
-				backgroundPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.background ) );
+				backgroundPaint = new Paint {
+					// Reads background color from resource.
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.background ) )
+				};
 
 				// Creates a graphics object for the hour hand.
-				var hourHandPaint = new Paint();
-				hourHandPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_hands ) );
-				// Sets the hour hand width.
-				hourHandPaint.StrokeWidth = resources.GetDimension( Resource.Dimension.hour_hand_stroke );
-				// Enable anti-aliasing.
-				hourHandPaint.AntiAlias = true;
-				// Specifies the shape of the line end in a round shape.
-				hourHandPaint.StrokeCap = Paint.Cap.Round;
+				var hourHandPaint = new Paint {
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_hands ) ),
+					// Sets the hour hand width.
+					StrokeWidth = resources.GetDimension( Resource.Dimension.hour_hand_stroke ),
+					// Enable anti-aliasing.
+					AntiAlias = true,
+					// Specifies the shape of the line end in a round shape.
+					StrokeCap = Paint.Cap.Round
+				};
 				// Creates the hour hand object.
 				hourHand = new HourAnalogHandStroke( hourHandPaint );
 
 				// Creates a graphics object for the minute hand.
-				var minuteHandPaint = new Paint();
-				minuteHandPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_hands ) );
-				minuteHandPaint.StrokeWidth = resources.GetDimension( Resource.Dimension.minute_hand_stroke );
-				minuteHandPaint.AntiAlias = true;
-				minuteHandPaint.StrokeCap = Paint.Cap.Round;
+				var minuteHandPaint = new Paint {
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_hands ) ),
+					StrokeWidth = resources.GetDimension( Resource.Dimension.minute_hand_stroke ),
+					AntiAlias = true,
+					StrokeCap = Paint.Cap.Round
+				};
 				minuteHand = new MinuteAnalogHandStroke( minuteHandPaint );
 
 				// Creates a graphics object for the second hand.
-				var secondHandPaint = new Paint();
-				secondHandPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_sec_hand ) );
-				secondHandPaint.StrokeWidth = resources.GetDimension( Resource.Dimension.second_hand_stroke );
-				secondHandPaint.AntiAlias = true;
-				secondHandPaint.StrokeCap = Paint.Cap.Round;
+				var secondHandPaint = new Paint {
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.analog_sec_hand ) ),
+					StrokeWidth = resources.GetDimension( Resource.Dimension.second_hand_stroke ),
+					AntiAlias = true,
+					StrokeCap = Paint.Cap.Round
+				};
 				secondHand = new SecondAnalogHandStroke( secondHandPaint );
 
 				// Creates an object that stores time.
@@ -757,8 +762,7 @@ namespace AndroidWearAnalogWatchface {
 			/// <summary>
 			///		Gets a value indicating whether to activate the timer.
 			/// </summary>
-			private bool ShouldTimerBeRunning =>
-				IsVisible && !IsInAmbientMode;
+			private bool ShouldTimerBeRunning => IsVisible && !IsInAmbientMode;
 		}
 	}
 }

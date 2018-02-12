@@ -73,16 +73,13 @@ using Android.OS;
 using Android.Support.V4.Content;
 using Android.Support.Wearable.Watchface;
 using Android.Text.Format;
+using Android.Util;
 using Android.Views;
 
 // Used with Service and Metadata attributes.
 using Android.App;
 // Used in the WallpaperService class.
 using Android.Service.Wallpaper;
-#if DEBUG
-// Used for log output (Only available for debug build).
-using Android.Util;
-#endif
 
 using Chronoir_net.Chronica.WatchfaceExtension;
 
@@ -344,11 +341,13 @@ namespace AndroidWearDigitalWatchface {
 						// Sets the height of the notification card when receiving the notification.
 						//   WatchFaceStyle.PeekModeShort    : Displays the notification card small at the bottom of the window.（default）
 						//   WatchFaceStyle.PeekModeVariable : Displays the notification card on the front of the window.
+						// Note: This method is deprecated in Android Wear 2.0
 						.SetCardPeekMode( WatchFaceStyle.PeekModeShort )
 
 						// Sets the display method of the notification card background.
 						//   WatchFaceStyle.BackgroundVisibilityInterruptive : Displays the notification card's background, only when some important notification such as incoming calls.（default）
 						//   WatchFaceStyle.BackgroundVisibilityPersistent   : Displays the notification card's background regardless of the notification type.
+						// Note: This method is deprecated in Android Wear 2.0
 						.SetBackgroundVisibility( WatchFaceStyle.BackgroundVisibilityInterruptive )
 
 						// Sets whether or not to display notification cards in ambient mode.
@@ -372,6 +371,7 @@ namespace AndroidWearDigitalWatchface {
 						// Sets whether the notification card is transparent.
 						//   WatchFaceStyle.PeekOpacityModeOpaque      : Opacity（default）
 						//   WatchFaceStyle.PeekOpacityModeTranslucent : Transparent
+						// Note: This method is deprecated in Android Wear 2.0
 						//.SetPeekOpacityMode( WatchFaceStyle.PeekOpacityModeTranslucent )
 
 						// Sets the status icon and "OK Google" position.
@@ -408,17 +408,19 @@ namespace AndroidWearDigitalWatchface {
 				#endregion
 
 				// Creates a graphics object for the background.
-				backgroundPaint = new Paint();
-				// Reads background color from resource.
-				backgroundPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.background ) );
+				backgroundPaint = new Paint {
+					// Reads background color from resource.
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.background ) )
+				};
 
 				// Creates a paint object for time display.
-				var digitalTimeTextPaint = new Paint();
-				digitalTimeTextPaint.Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.foreground ) );
+				var digitalTimeTextPaint = new Paint {
+					Color = WatchfaceUtility.ConvertARGBToColor( ContextCompat.GetColor( owner, Resource.Color.foreground ) ),
+					// Eneble anti-aliasing.
+					AntiAlias = true
+				};
 				// Sets the text style.
 				digitalTimeTextPaint.SetTypeface( Typeface.Default );
-				// Eneble anti-aliasing.
-				digitalTimeTextPaint.AntiAlias = true;
 				// Gets the position of Y coordinate.
 				var yOffset = owner.Resources.GetDimension( Resource.Dimension.digital_y_offset );
 				// Creates the time display object.
@@ -715,8 +717,7 @@ namespace AndroidWearDigitalWatchface {
 			/// <summary>
 			///		Gets a value indicating whether to activate the timer.
 			/// </summary>
-			private bool ShouldTimerBeRunning =>
-				IsVisible && !IsInAmbientMode;
+			private bool ShouldTimerBeRunning => IsVisible && !IsInAmbientMode;
 		}
 	}
 }
