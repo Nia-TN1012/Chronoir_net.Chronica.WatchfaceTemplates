@@ -52,7 +52,7 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 		/// </summary>
 		/// <value>true : Registered / false : Unregisered</value>
 		public bool IsRegistered {
-			get { return isRegistered; }
+			get => isRegistered;
 			set {
 				if( value != isRegistered ) {
 					if( value ) {
@@ -70,23 +70,17 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 		///		Creates a new instance of <see cref="RegistrationSwitchableBroadcastReceiver"/> class from the specified <see cref="Intent"/> MIME type.
 		/// </summary>
 		/// <param name="filter">MIME type for identifying <see cref="Intent"/> information</param>
-		public RegistrationSwitchableBroadcastReceiver( string filter ) {
-			intentFilter = new IntentFilter( filter );
-		}
+		public RegistrationSwitchableBroadcastReceiver( string filter ) => intentFilter = new IntentFilter( filter );
 
 		/// <summary>
 		///		Register the <see cref="BroadcastReceiver"/> to <see cref="Application.Context"/>.
 		/// </summary>
-		public void RegisterToContext() {
-			IsRegistered = true;
-		}
+		public void RegisterToContext() => IsRegistered = true;
 
 		/// <summary>
 		///		Unregister the <see cref="BroadcastReceiver"/> from <see cref="Application.Context"/>.
 		/// </summary>
-		public void UnregisterFromContext() {
-			IsRegistered = false;
-		}
+		public void UnregisterFromContext() => IsRegistered = false;
 	}
 
 	/// <summary>
@@ -104,18 +98,14 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 		/// </summary>
 		/// <param name="action">Delegate to execute when receiving <see cref="Intent"/></param>
 		/// <param name="filter">MIME type for identifying <see cref="Intent"/> information</param>
-		public ActionExecutableBroadcastReceiver( Action<Intent> action, string filter ) : base( filter ) {
-			broadcastedIntentRecieved = action;
-		}
+		public ActionExecutableBroadcastReceiver( Action<Intent> action, string filter ) : base( filter ) => broadcastedIntentRecieved = action;
 
 		/// <summary>
 		///		Invoked when receives a broadcast <see cref="Intent"/>.
 		/// </summary>
 		/// <param name="context"><see cref="Context"/> object registering receiver</param>
 		/// <param name="intent">Broadcasted <see cref="Intent"/> object</param>
-		public override void OnReceive( Context context, Intent intent ) {
-			broadcastedIntentRecieved?.Invoke( intent );
-		}
+		public override void OnReceive( Context context, Intent intent ) => broadcastedIntentRecieved?.Invoke( intent );
 	}
 
 	/// <summary>
@@ -139,8 +129,6 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 		/// </summary>
 		/// <param name="context"><see cref="Context"/> object registering receiver (Passed to the delegate method's "sender".)</param>
 		/// <param name="intent">Broadcasted <see cref="Intent"/> object (Passed to the delegate method's "e".)</param>
-		public override void OnReceive( Context context, Intent intent ) {
-			BroadcastedIntentRecieved?.Invoke( context, intent );
-		}
+		public override void OnReceive( Context context, Intent intent ) => BroadcastedIntentRecieved?.Invoke( context, intent );
 	}
 }

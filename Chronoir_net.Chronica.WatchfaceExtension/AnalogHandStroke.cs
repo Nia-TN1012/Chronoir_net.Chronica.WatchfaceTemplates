@@ -52,7 +52,7 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 		/// <summary>
 		///		Gets the length of the hand.
 		/// </summary>
-		public float Length { get; set; }
+		public float Length { get; set; } = 0.0f;
 
 		/// <summary>
 		///		Creates a new instance of <see cref="AnalogHandStroke"/> class from the specified <see cref="Android.Graphics.Paint"/> object and hand length.
@@ -97,22 +97,19 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 #if __ANDROID_22__
 		[Obsolete( "This method is obsoleted in this android platform." )]
 #endif
-		public void SetTime( Time time ) =>
-			SetTime( time.Second );
+		public void SetTime( Time time ) => SetTime( time.Second );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the second hand tip for the seconds of the specified <see cref="Java.Util.Calendar"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="Java.Util.Calendar"/> object storing the time</param>
-		public void SetTime( Java.Util.Calendar time ) =>
-			SetTime( time.Get( Java.Util.CalendarField.Second ) );
+		public void SetTime( Java.Util.Calendar time ) => SetTime( time.Get( Java.Util.CalendarField.Second ) );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the second hand tip for the seconds of the specified <see cref="DateTime"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="DateTime"/> object storing the time</param>
-		public void SetTime( DateTime time ) =>
-			SetTime( time.Second );
+		public void SetTime( DateTime time ) => SetTime( time.Second );
 	}
 
 	/// <summary>
@@ -145,22 +142,19 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 #if __ANDROID_22__
 		[Obsolete( "This method is obsoleted in this android platform." )]
 #endif
-		public void SetTime( Time time ) =>
-			SetTime( time.Minute );
+		public void SetTime( Time time ) => SetTime( time.Minute );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the minute hand tip for the minutes of the specified <see cref="Java.Util.Calendar"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="Java.Util.Calendar"/> object storing the time</param>
-		public void SetTime( Java.Util.Calendar time ) =>
-			SetTime( time.Get( Java.Util.CalendarField.Minute ) );
+		public void SetTime( Java.Util.Calendar time ) => SetTime( time.Get( Java.Util.CalendarField.Minute ) );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the minute hand tip for the minutes of the specified <see cref="DateTime"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="DateTime"/> object storing the time</param>
-		public void SetTime( DateTime time ) =>
-			SetTime( time.Minute );
+		public void SetTime( DateTime time ) => SetTime( time.Minute );
 	}
 
 	/// <summary>
@@ -193,21 +187,18 @@ namespace Chronoir_net.Chronica.WatchfaceExtension {
 #if __ANDROID_22__
 		[Obsolete( "This method is obsoleted in this android platform." )]
 #endif
-		public void SetTime( Time time ) =>
-			SetTime( time.Hour, time.Minute );
+		public void SetTime( Time time ) => SetTime( time.Hour, time.Minute );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the hour hand tip for the hours and minutes of the specified <see cref="Java.Util.Calendar"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="Java.Util.Calendar"/> object storing the time</param>
-		public void SetTime( Java.Util.Calendar time ) =>
-			SetTime( time.Get( Java.Util.CalendarField.Hour ), time.Get( Java.Util.CalendarField.Minute ) );
+		public void SetTime( Java.Util.Calendar time ) => SetTime( time.Get( Java.Util.CalendarField.Hour ), time.Get( Java.Util.CalendarField.Minute ) );
 
 		/// <summary>
 		///		Calculates the XY coordinates of the hour hand tip for the hours and minutes of the specified <see cref="DateTime"/> object.
 		/// </summary>
 		/// <param name="time"><see cref="DateTime"/> object storing the time</param>
-		public void SetTime( DateTime time ) =>
-			SetTime( time.Hour, time.Minute );
+		public void SetTime( DateTime time ) => SetTime( time.Hour, time.Minute );
 	}
 }
